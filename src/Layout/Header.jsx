@@ -2,7 +2,7 @@ import { GrNotification } from "react-icons/gr";
 import Myself_Image from "../assets/images/me.jpg";
 const Header = () => {
   return (
-    <div className="bg-blue-950 py-3 flex justify-between items-center px-56">
+    <div className="bg-blue-950 py-3 flex justify-between items-center px-56 font-ubuntu">
       <ul className="text-cyan-50 flex gap-10 text-xs">
         <li>
           <a href="">Dashboard</a>
