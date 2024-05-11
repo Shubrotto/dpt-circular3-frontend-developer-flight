@@ -1,5 +1,6 @@
 import "./App.css";
 import AllButton from "./Components/AllButton";
+import Form from "./Components/Form";
 import Header from "./Layout/Header";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       </h1>
       <hr className="border-b  border-b-gray-200" />
       <AllButton />
+      <Form />
     </div>
   );
 }

@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         ubuntu: ["Ubuntu Sans", "sans-serif"],
       },
+      placeholderColor: ["responsive", "focus", "hover", "active"],
     },
   },
   plugins: [],
