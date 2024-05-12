@@ -15,9 +15,6 @@ function App() {
       <AllButton />
       <Form />
       <SearchContainer />
-      <div className="px-56">
-        <hr className=" border-b  border-b-blue-300" />
-      </div>
     </div>
   );
 }
