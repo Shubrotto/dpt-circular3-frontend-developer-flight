@@ -22,7 +22,7 @@ const SearchContainer = () => {
 
   //   console.log(flights.flightOffer.map((offer) => offer.itineraries));
   const handleSearch = async () => {
-    setShowData(!showData);
+    setShowData(true);
   };
   return (
     <>
