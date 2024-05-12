@@ -52,32 +52,48 @@ const SearchContainer = () => {
         </button>
       </div>
       <div className="px-56">
-        <hr className="border-b  border-b-blue-300" />
+        <hr className="border-b  border-b-blue-400" />
       </div>
-      <div className="px-56">
-        {showData && (
-          <table className="table-auto border-spacing-4 border-separate border bg-gray-200 text-sm overflow-hidden">
-            <thead>
-              <tr>
-                <th>FLIGHT</th>
-                <th>AIRCRAFT</th>
-                <th>CLASS</th>
-                <th>FARE</th>
-                <th>ROUTE</th>
-                <th>DEPARTURE</th>
-                <th>ARRIVAL</th>
-                <th>DURATION</th>
-                <th>
-                  PRICE <button>SELECT</button>
+      {showData && (
+        <div className="px-56">
+          <p className="font-semibold mt--1 mb-5">Data parsed successfully</p>
+          <table className="table-auto w-full font-light text-sm">
+            <thead className="font-light text-xs text-gray-600">
+              <tr className="border bg-gray-200 text-center tracking-wider">
+                <th className="font-semibold p-3">
+                  <p className="">FLIGHT</p>
                 </th>
+                <th className="font-semibold">
+                  <p>AIRCRAFT</p>
+                </th>
+                <th className="font-semibold">
+                  <p>CLASS</p>
+                </th>
+                <th className="font-semibold">
+                  <p>FARE</p>
+                </th>
+                <th className="font-semibold">
+                  <p>ROUTE</p>
+                </th>
+                <th className="font-semibold">
+                  <p>DEPARTURE</p>
+                </th>
+                <th className="font-semibold">
+                  <p>ARRIVAL</p>
+                </th>
+                <th></th>
+                <th className="font-semibold">
+                  <p>DURATION</p>
+                </th>
+                <th className="font-semibold">PRICE</th>
               </tr>
             </thead>
 
-            <tbody>
+            <tbody className="text-xs text-gray-600 tracking-wider">
               {flights.flightOffer.map((flight) => (
                 <>
-                  <tr>
-                    <td>
+                  <tr className="even:bg-gray-300 odd:bg-gray-100 text-xs tracking-wide border-b border-red-400 relative">
+                    <td className="pl-6 border-b mt-1 border-red-200 absolute w-full">
                       {flight.itineraries[0].segments.map((fligt) => (
                         <>
                           <p>
@@ -87,7 +103,7 @@ const SearchContainer = () => {
                         </>
                       ))}
                     </td>
-                    <td>
+                    <td className="text-center">
                       {flight.itineraries[0].segments.map((aircraft) => (
                         <>
                           <p>
@@ -96,7 +112,7 @@ const SearchContainer = () => {
                         </>
                       ))}
                     </td>
-                    <td>
+                    <td className="px-2">
                       {flight.class.map((cls) => (
                         <>
                           <p>
@@ -146,11 +162,14 @@ const SearchContainer = () => {
                       ))}
                     </td>
                     <td>
+                      <p>----</p>
+                    </td>
+                    <td className="text-center">
                       <p>{flight.itineraries[0].duration}</p>
                     </td>
                     <td className="flex flex-col items-center justify-center">
                       <p>{flight.price}</p>
-                      <button className="bg-blue-950 text-sm text-gray-200 px-4 py-1 rounded-sm">
+                      <button className="bg-blue-950 text-sm text-gray-200 px-4 py-1 rounded-sm cursor-pointer z-10">
                         SELECT
                       </button>
                     </td>
@@ -159,8 +178,8 @@ const SearchContainer = () => {
               ))}
             </tbody>
           </table>
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 };
